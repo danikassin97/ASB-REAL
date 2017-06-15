@@ -1,4 +1,6 @@
 
+health = 100;
+health1 = 100;
 
 function Head (){
   this.x = 860;
@@ -45,6 +47,16 @@ function Head (){
   ctx.drawImage(jo,220,joy,200,210);
 
 
+  ctx.fillStyle="red";
+  ctx.font = "50px fire";
+  ctx.fillText("AMAZING SMASH BROS",390,70);
+
+  ctx.fillStyle="green";
+  ctx.fillRect(90,20,(health/100)*280,50);
+
+  ctx.fillStyle="green";
+  ctx.fillRect(990, 20,(health1/100)*280,50);
+
 
            ctx.drawImage(face, xCord, 450,65,65);
 
@@ -58,9 +70,40 @@ function Head (){
             ctx.drawImage(lebron,880,lebrony,230,240);
             ctx.drawImage(jo,220,joy,200,210);
 
+            setTimeout (function(){
+
+            ctx.fillStyle="red";
+            ctx.font = "50px fire";
+            ctx.fillText("AMAZING SMASH BROS",390,70);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(90,20,(health/100)*280,50);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(990, 20,(health1/100)*280,50);
+
+            if (health <= 0) {
+
+              ctx.fillStyle="red";
+              ctx.font = "100px fire";
+              ctx.fillText("YOU'RE DONE BUDDY",200,470);
+
+            }
+            },50);
           }
        }, 30);
 
+
+
+       health -=40;
+
+      //  if (health <= 0) {
+       //
+      //    ctx.fillStyle="red";
+      //    ctx.font = "500px fire";
+      //    ctx.fillText("YOU'RE DONE BUDDY",390,70);
+       //
+      //  }
 
      };
 }
@@ -105,38 +148,60 @@ function Macbook (){
           if (xCord > 530) {
           yCord -=10;
            xCord -= 20;
-            if (xCord === 200) {
-              clearInterval(interval);
-              var backgroundImage = new Image();
-              backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
 
-              backgroundImage.onload = function(){
-                ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
-              };
+           ctx.fillStyle="red";
+           ctx.font = "50px fire";
+           ctx.fillText("AMAZING SMASH BROS",390,70);
 
-              setTimeout (function(){
-              var jo = new Image();
-              jo.src = "img/joe.png";
+           ctx.fillStyle="green";
+           ctx.fillRect(90,20,(health/100)*280,50);
 
-              jo.onload = function (){
-                ctx.drawImage(jo,220,joy,200,210);
-              };
-            },10);
+           ctx.fillStyle="green";
+           ctx.fillRect(990, 20,(health1/100)*280,50);
 
-              setTimeout (function(){
-              var lebron = new Image();
-              lebron.src = "img/lebron.png";
-
-              lebron.onload = function (){
-                ctx.drawImage(lebron,880,lebrony,230,240);
-              };
-            },10);
-
-            }
+            // if (xCord === 200) {
+            //   clearInterval(interval);
+            //   var backgroundImage = new Image();
+            //   backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
+            //
+            //   backgroundImage.onload = function(){
+            //     ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
+            //   };
+            //
+            //   setTimeout (function(){
+            //   var jo = new Image();
+            //   jo.src = "img/joe.png";
+            //
+            //   jo.onload = function (){
+            //     ctx.drawImage(jo,220,joy,200,210);
+            //   };
+            // },10);
+            //
+            //   setTimeout (function(){
+            //   var lebron = new Image();
+            //   lebron.src = "img/lebron.png";
+            //
+            //   lebron.onload = function (){
+            //     ctx.drawImage(lebron,880,lebrony,230,240);
+            //   };
+            // },10);
+            //
+            // }
           }
         else if (xCord < 530){
           yCord +=10;
            xCord -= 20;
+
+           ctx.fillStyle="red";
+           ctx.font = "50px fire";
+           ctx.fillText("AMAZING SMASH BROS",390,70);
+
+           ctx.fillStyle="green";
+           ctx.fillRect(90,20,(health/100)*280,50);
+
+           ctx.fillStyle="green";
+           ctx.fillRect(990, 20,(health1/100)*280,50);
+
             if (xCord === 200) {
               clearInterval(interval);
               var backgroundImage = new Image();
@@ -166,9 +231,43 @@ function Macbook (){
 
             }
         }
+        setTimeout (function(){
+
+        ctx.fillStyle="red";
+        ctx.font = "50px fire";
+        ctx.fillText("AMAZING SMASH BROS",390,70);
+
+        ctx.fillStyle="green";
+        ctx.fillRect(90,20,(health/100)*280,50);
+
+        ctx.fillStyle="green";
+        ctx.fillRect(990, 20,(health1/100)*280,50);
+
+        if (health <= 0) {
+
+          ctx.fillStyle="red";
+          ctx.font = "100px fire";
+          ctx.fillText("YOU'RE DONE BUDDY",200,470);
+
+        }
+        },50);
 
        }, 30);
 
+       setTimeout (function(){
+
+       ctx.fillStyle="red";
+       ctx.font = "50px fire";
+       ctx.fillText("AMAZING SMASH BROS",390,70);
+
+       ctx.fillStyle="green";
+       ctx.fillRect(90,20,(health/100)*280,50);
+
+       ctx.fillStyle="green";
+       ctx.fillRect(990, 20,(health1/100)*280,50);
+       },50);
+
+       health -=20;
 
 };
 
@@ -219,7 +318,15 @@ function Sword (){
   ctx.drawImage(lebron,880,lebrony,230,240);
   ctx.drawImage(jo,220,joy,200,210);
 
+  ctx.fillStyle="red";
+  ctx.font = "50px fire";
+  ctx.fillText("AMAZING SMASH BROS",390,70);
 
+  ctx.fillStyle="green";
+  ctx.fillRect(90,20,(health/100)*280,50);
+
+  ctx.fillStyle="green";
+  ctx.fillRect(990, 20,(health1/100)*280,50);
 
            ctx.drawImage(sword, xCord, 450,90,90);
 
@@ -233,9 +340,30 @@ function Sword (){
             ctx.drawImage(lebron,880,lebrony,230,240);
             ctx.drawImage(jo,220,joy,200,210);
 
+            setTimeout (function(){
+
+            ctx.fillStyle="red";
+            ctx.font = "50px fire";
+            ctx.fillText("AMAZING SMASH BROS",390,70);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(90,20,(health/100)*280,50);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(990, 20,(health1/100)*280,50);
+
+            if (health <= 0) {
+
+              ctx.fillStyle="red";
+              ctx.font = "100px fire";
+              ctx.fillText("YOU'RE DONE BUDDY",200,470);
+
+            }
+            },50);
           }
        }, 30);
 
+       health1 -=40;
 
      };
 }
@@ -276,11 +404,64 @@ function Wheelchair (){
            ctx.drawImage(wheelchair, xCord, yCord,65,65);
 
           if (xCord < 730) {
-
           yCord -=10;
            xCord += 20;
 
-           ctx.drawImage(wheelchair, xCord, yCord,65,65);
+           ctx.fillStyle="red";
+           ctx.font = "50px fire";
+           ctx.fillText("AMAZING SMASH BROS",390,70);
+
+           ctx.fillStyle="green";
+           ctx.fillRect(90,20,(health/100)*280,50);
+
+           ctx.fillStyle="green";
+           ctx.fillRect(990, 20,(health1/100)*280,50);
+
+          //  ctx.drawImage(wheelchair, xCord, yCord,65,65);
+
+            // if (xCord === 1100) {
+            //   clearInterval(interval);
+            //   var backgroundImage = new Image();
+            //   backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
+            //
+            //   backgroundImage.onload = function(){
+            //     ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
+            //   };
+            //
+            //   setTimeout (function(){
+            //   var jo = new Image();
+            //   jo.src = "img/joe.png";
+            //
+            //   jo.onload = function (){
+            //     ctx.drawImage(jo,220,joy,200,210);
+            //   };
+            // },10);
+            //
+            //   setTimeout (function(){
+            //   var lebron = new Image();
+            //   lebron.src = "img/lebron.png";
+            //
+            //   lebron.onload = function (){
+            //     ctx.drawImage(lebron,880,lebrony,230,240);
+            //   };
+            // },10);
+            //
+            // }
+          }
+        else if (xCord > 730){
+
+          yCord +=10;
+           xCord += 20;
+
+           ctx.fillStyle="red";
+           ctx.font = "50px fire";
+           ctx.fillText("AMAZING SMASH BROS",390,70);
+
+           ctx.fillStyle="green";
+           ctx.fillRect(90,20,(health/100)*280,50);
+
+           ctx.fillStyle="green";
+           ctx.fillRect(990, 20,(health1/100)*280,50);
 
             if (xCord === 1100) {
               clearInterval(interval);
@@ -309,49 +490,54 @@ function Wheelchair (){
               };
             },10);
 
+
+
+
+            setTimeout (function(){
+
+            ctx.fillStyle="red";
+            ctx.font = "50px fire";
+            ctx.fillText("AMAZING SMASH BROS",390,70);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(90,20,(health/100)*280,50);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(990, 20,(health1/100)*280,50);
+
+            if (health <= 0) {
+
+              ctx.fillStyle="red";
+              ctx.font = "100px fire";
+              ctx.fillText("YOU'RE DONE BUDDY",200,470);
+
             }
-          }
-        else if (xCord > 730){
-
-          yCord +=10;
-           xCord += 20;
-
-
-           ctx.drawImage(wheelchair, xCord, yCord,65,65);
-
-
-            if (xCord === 1100) {
-              clearInterval(interval);
-              var backgroundImage = new Image();
-              backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
-
-              backgroundImage.onload = function(){
-                ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
-              };
-
-              setTimeout (function(){
-              var jo = new Image();
-              jo.src = "img/joe.png";
-
-              jo.onload = function (){
-                ctx.drawImage(jo,220,430,200,210);
-              };
-            },10);
-
-              setTimeout (function(){
-              var lebron = new Image();
-              lebron.src = "img/lebron.png";
-
-              lebron.onload = function (){
-                ctx.drawImage(lebron,880,400,230,240);
-              };
-            },10);
-
+            },50);
             }
         }
-
+        // if (health <= 0) {
+        //
+        //   ctx.fillStyle="red";
+        //   ctx.font = "100px fire";
+        //   ctx.fillText("YOU'RE DONE BUDDY",200,470);
+        //
+        // }
        }, 30);
 
+      //  setTimeout (function(){
+       //
+      //  ctx.fillStyle="red";
+      //  ctx.font = "50px fire";
+      //  ctx.fillText("AMAZING SMASH BROS",390,70);
+       //
+      //  ctx.fillStyle="green";
+      //  ctx.fillRect(90,20,(health/100)*280,50);
+       //
+      //  ctx.fillStyle="green";
+      //  ctx.fillRect(990, 20,(health1/100)*280,50);
+      //  },50);
+
+       health1 -=20;
 
 };
 
