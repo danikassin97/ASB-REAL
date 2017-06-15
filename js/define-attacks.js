@@ -558,6 +558,16 @@ Image.prototype.Jump = function (){
         lebrony-=50;
         console.log('jumping: ' + lebrony);
         ctx.drawImage(lebron,880,lebrony,230,240);
+
+        ctx.fillStyle="red";
+        ctx.font = "50px fire";
+        ctx.fillText("AMAZING SMASH BROS",390,70);
+
+        ctx.fillStyle="green";
+        ctx.fillRect(90,20,(health/100)*280,50);
+
+        ctx.fillStyle="green";
+        ctx.fillRect(990, 20,(health1/100)*280,50);
 }
     else if (lebrony < jump_y )  {
         {
@@ -569,6 +579,16 @@ Image.prototype.Jump = function (){
 
           lebrony +=50;
           console.log('jumping: ' + lebrony);
+
+          ctx.fillStyle="red";
+          ctx.font = "50px fire";
+          ctx.fillText("AMAZING SMASH BROS",390,70);
+
+          ctx.fillStyle="green";
+          ctx.fillRect(90,20,(health/100)*280,50);
+
+          ctx.fillStyle="green";
+          ctx.fillRect(990, 20,(health1/100)*280,50);
 
           ctx.drawImage(lebron,880,lebrony,230,240);
       }
@@ -589,8 +609,17 @@ Image.prototype.Jump1 = function (){
 
         joy-=50;
         console.log('jumping: ' + joy);
-        ctx.drawImage(jo,220,joy,200,230);
 
+        ctx.fillStyle="red";
+        ctx.font = "50px fire";
+        ctx.fillText("AMAZING SMASH BROS",390,70);
+
+        ctx.fillStyle="green";
+        ctx.fillRect(90,20,(health/100)*280,50);
+
+        ctx.fillStyle="green";
+        ctx.fillRect(990, 20,(health1/100)*280,50);
+        ctx.drawImage(jo,220,joy,200,230);
 
 }
     else if (joy < jump_y )  {
@@ -601,9 +630,18 @@ Image.prototype.Jump1 = function (){
       ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
       ctx.drawImage(lebron,880,lebrony,230,240);
 
-
           joy +=50;
           console.log('jumping: ' + joy);
+
+          ctx.fillStyle="red";
+          ctx.font = "50px fire";
+          ctx.fillText("AMAZING SMASH BROS",390,70);
+
+          ctx.fillStyle="green";
+          ctx.fillRect(90,20,(health/100)*280,50);
+
+          ctx.fillStyle="green";
+          ctx.fillRect(990, 20,(health1/100)*280,50);
 
           ctx.drawImage(jo,220,joy,200,230);
       }

@@ -64,8 +64,8 @@ ctx.font = "50px fire";
 ctx.fillText("AMAZING SMASH BROS",390,70);
 
 ctx.fillStyle="red";
-ctx.font = "50px fire";
-ctx.fillText("FIGHT",590,170);
+ctx.font = "150px fire";
+ctx.fillText("FIGHT",480,440);
 
 ctx.fillStyle="green";
 ctx.fillRect(90,20,(health/100)*280,50);
