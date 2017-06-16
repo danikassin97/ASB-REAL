@@ -10,7 +10,7 @@ function Head (){
   head.src = "img/dani-throw.png";
 
   var backgroundImage = new Image();
-  backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
+  backgroundImage.src = "img/background.png";
 
   backgroundImage.onload = function(){
     ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
@@ -38,14 +38,25 @@ function Head (){
 
 
      var interval = setInterval(function() {
-  console.log("are we repeating " + xCord);
-
 
   ctx.clearRect(xCord,450,65,65);
   ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
   ctx.drawImage(lebron,880,lebrony,230,240);
   ctx.drawImage(jo,220,joy,200,210);
 
+  var border = new Image();
+  border.src = "img/border.png";
+
+  border.onload = function(){
+  ctx.drawImage(border,85,-5,285,100);
+  };
+
+  var border1 = new Image();
+  border1.src = "img/border.png";
+
+  border1.onload = function(){
+  ctx.drawImage(border1,990,-5,285,100);
+  };
 
   ctx.fillStyle="red";
   ctx.font = "50px fire";
@@ -57,6 +68,19 @@ function Head (){
   ctx.fillStyle="green";
   ctx.fillRect(990, 20,(health1/100)*280,50);
 
+  ctx.fillStyle="black";
+  ctx.font = "35px fire";
+  ctx.fillText("Joe", 100, 60);
+
+  ctx.fillStyle="black";
+  ctx.font = "35px fire";
+  ctx.fillText("Lebron", 1160, 60);
+
+  var backgroundImage1 = new Image();
+  backgroundImage1.src = "img/smash1.png";
+  backgroundImage1.onload = function(){
+  ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+  };
 
            ctx.drawImage(face, xCord, 450,65,65);
 
@@ -72,6 +96,20 @@ function Head (){
 
             setTimeout (function(){
 
+              var border = new Image();
+              border.src = "img/border.png";
+
+              border.onload = function(){
+              ctx.drawImage(border,85,-5,285,100);
+              };
+
+              var border1 = new Image();
+              border1.src = "img/border.png";
+
+              border1.onload = function(){
+              ctx.drawImage(border1,990,-5,285,100);
+              };
+
             ctx.fillStyle="red";
             ctx.font = "50px fire";
             ctx.fillText("AMAZING SMASH BROS",390,70);
@@ -82,33 +120,126 @@ function Head (){
             ctx.fillStyle="green";
             ctx.fillRect(990, 20,(health1/100)*280,50);
 
-            if (health <= 0) {
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Joe", 100, 60);
 
-              ctx.fillStyle="red";
-              ctx.font = "100px fire";
-              ctx.fillText("YOU'RE DONE BUDDY",200,470);
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Lebron", 1160, 60);
 
-            }
+            var backgroundImage1 = new Image();
+            backgroundImage1.src = "img/smash1.png";
+            backgroundImage1.onload = function(){
+            ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+            };
+
             },50);
           }
+          if (xCord < 420 && joy > 350){
+            console.log("HERE EWE GOO");
+            health -=20;
+            ctx.clearRect(xCord,450,65,65);
+            ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
+            ctx.drawImage(lebron,880,lebrony,230,240);
+            ctx.drawImage(jo,220,joy,200,210);
+
+            var border = new Image();
+            border.src = "img/border.png";
+
+            border.onload = function(){
+            ctx.drawImage(border,85,-5,285,100);
+            };
+
+            var border1 = new Image();
+            border1.src = "img/border.png";
+
+            border1.onload = function(){
+            ctx.drawImage(border1,990,-5,285,100);
+            };
+
+            ctx.fillStyle="red";
+            ctx.font = "50px fire";
+            ctx.fillText("AMAZING SMASH BROS",390,70);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(90,20,(health/100)*280,50);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(990, 20,(health1/100)*280,50);
+
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Joe", 100, 60);
+
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Lebron", 1160, 60);
+
+            var backgroundImage1 = new Image();
+            backgroundImage1.src = "img/smash1.png";
+            backgroundImage1.onload = function(){
+            ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+            };
+            if (health <= 0) {
+
+              alert("Hello, you lost!");
+
+              health = 100;
+
+              document.location.reload();
+
+              theEvent.preventDefault();
+
+
+            }
+            clearInterval(interval);
+
+
+                }
        }, 30);
+       setTimeout (function(){
 
+         var border = new Image();
+         border.src = "img/border.png";
 
+         border.onload = function(){
+         ctx.drawImage(border,85,-5,285,100);
+         };
 
-       health -=40;
+         var border1 = new Image();
+         border1.src = "img/border.png";
 
-      //  if (health <= 0) {
-       //
-      //    ctx.fillStyle="red";
-      //    ctx.font = "500px fire";
-      //    ctx.fillText("YOU'RE DONE BUDDY",390,70);
-       //
-      //  }
+         border1.onload = function(){
+         ctx.drawImage(border1,990,-5,285,100);
+         };
 
+       ctx.fillStyle="red";
+       ctx.font = "50px fire";
+       ctx.fillText("AMAZING SMASH BROS",390,70);
+
+       ctx.fillStyle="green";
+       ctx.fillRect(90,20,(health/100)*280,50);
+
+       ctx.fillStyle="green";
+       ctx.fillRect(990, 20,(health1/100)*280,50);
+
+       ctx.fillStyle="black";
+       ctx.font = "35px fire";
+       ctx.fillText("Joe", 100, 60);
+
+       ctx.fillStyle="black";
+       ctx.font = "35px fire";
+       ctx.fillText("Lebron", 1160, 60);
+
+       var backgroundImage1 = new Image();
+       backgroundImage1.src = "img/smash1.png";
+       backgroundImage1.onload = function(){
+       ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+       };
+       },50);
      };
 }
-
-
 
 function Macbook (){
   this.x = 860;
@@ -149,6 +280,20 @@ function Macbook (){
           yCord -=10;
            xCord -= 20;
 
+           var border = new Image();
+           border.src = "img/border.png";
+
+           border.onload = function(){
+           ctx.drawImage(border,85,-5,285,100);
+           };
+
+           var border1 = new Image();
+           border1.src = "img/border.png";
+
+           border1.onload = function(){
+           ctx.drawImage(border1,990,-5,285,100);
+           };
+
            ctx.fillStyle="red";
            ctx.font = "50px fire";
            ctx.fillText("AMAZING SMASH BROS",390,70);
@@ -158,6 +303,20 @@ function Macbook (){
 
            ctx.fillStyle="green";
            ctx.fillRect(990, 20,(health1/100)*280,50);
+
+           ctx.fillStyle="black";
+           ctx.font = "35px fire";
+           ctx.fillText("Joe", 100, 60);
+
+           ctx.fillStyle="black";
+           ctx.font = "35px fire";
+           ctx.fillText("Lebron", 1160, 60);
+
+           var backgroundImage1 = new Image();
+           backgroundImage1.src = "img/smash1.png";
+           backgroundImage1.onload = function(){
+           ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+           };
 
             // if (xCord === 200) {
             //   clearInterval(interval);
@@ -192,6 +351,20 @@ function Macbook (){
           yCord +=10;
            xCord -= 20;
 
+           var border = new Image();
+           border.src = "img/border.png";
+
+           border.onload = function(){
+           ctx.drawImage(border,85,-5,285,100);
+           };
+
+           var border1 = new Image();
+           border1.src = "img/border.png";
+
+           border1.onload = function(){
+           ctx.drawImage(border1,990,-5,285,100);
+           };
+
            ctx.fillStyle="red";
            ctx.font = "50px fire";
            ctx.fillText("AMAZING SMASH BROS",390,70);
@@ -202,10 +375,24 @@ function Macbook (){
            ctx.fillStyle="green";
            ctx.fillRect(990, 20,(health1/100)*280,50);
 
+           ctx.fillStyle="black";
+           ctx.font = "35px fire";
+           ctx.fillText("Joe", 100, 60);
+
+           ctx.fillStyle="black";
+           ctx.font = "35px fire";
+           ctx.fillText("Lebron", 1160, 60);
+
+           var backgroundImage1 = new Image();
+           backgroundImage1.src = "img/smash1.png";
+           backgroundImage1.onload = function(){
+           ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+           };
+
             if (xCord === 200) {
               clearInterval(interval);
               var backgroundImage = new Image();
-              backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
+              backgroundImage.src = "img/background.png";
 
               backgroundImage.onload = function(){
                 ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
@@ -233,6 +420,20 @@ function Macbook (){
         }
         setTimeout (function(){
 
+          var border = new Image();
+          border.src = "img/border.png";
+
+          border.onload = function(){
+          ctx.drawImage(border,85,-5,285,100);
+          };
+
+          var border1 = new Image();
+          border1.src = "img/border.png";
+
+          border1.onload = function(){
+          ctx.drawImage(border1,990,-5,285,100);
+          };
+
         ctx.fillStyle="red";
         ctx.font = "50px fire";
         ctx.fillText("AMAZING SMASH BROS",390,70);
@@ -243,11 +444,25 @@ function Macbook (){
         ctx.fillStyle="green";
         ctx.fillRect(990, 20,(health1/100)*280,50);
 
+        ctx.fillStyle="black";
+        ctx.font = "35px fire";
+        ctx.fillText("Joe", 100, 60);
+
+        ctx.fillStyle="black";
+        ctx.font = "35px fire";
+        ctx.fillText("Lebron", 1160, 60);
+
+        var backgroundImage1 = new Image();
+        backgroundImage1.src = "img/smash1.png";
+        backgroundImage1.onload = function(){
+        ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+        };
+
         if (health <= 0) {
 
-          ctx.fillStyle="red";
-          ctx.font = "100px fire";
-          ctx.fillText("YOU'RE DONE BUDDY",200,470);
+          alert("Hello, you lost!");
+          theEvent.preventDefault();
+
 
         }
         },50);
@@ -255,6 +470,20 @@ function Macbook (){
        }, 30);
 
        setTimeout (function(){
+
+         var border = new Image();
+         border.src = "img/border.png";
+
+         border.onload = function(){
+         ctx.drawImage(border,85,-5,285,100);
+         };
+
+         var border1 = new Image();
+         border1.src = "img/border.png";
+
+         border1.onload = function(){
+         ctx.drawImage(border1,990,-5,285,100);
+         };
 
        ctx.fillStyle="red";
        ctx.font = "50px fire";
@@ -265,9 +494,23 @@ function Macbook (){
 
        ctx.fillStyle="green";
        ctx.fillRect(990, 20,(health1/100)*280,50);
+
+       ctx.fillStyle="black";
+       ctx.font = "35px fire";
+       ctx.fillText("Joe", 100, 60);
+
+       ctx.fillStyle="black";
+       ctx.font = "35px fire";
+       ctx.fillText("Lebron", 1160, 60);
+
+       var backgroundImage1 = new Image();
+       backgroundImage1.src = "img/smash1.png";
+       backgroundImage1.onload = function(){
+       ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+       };
        },50);
 
-       health -=20;
+       health -=10;
 
 };
 
@@ -282,7 +525,7 @@ function Sword (){
   sword.src = "img/sword.png";
 
   var backgroundImage = new Image();
-  backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
+  backgroundImage.src = "img/background.png";
 
   backgroundImage.onload = function(){
     ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
@@ -310,13 +553,25 @@ function Sword (){
 
 
      var interval = setInterval(function() {
-  console.log("are we repeating " + xCord);
-
 
   ctx.clearRect(xCord,450,90,90);
   ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
   ctx.drawImage(lebron,880,lebrony,230,240);
   ctx.drawImage(jo,220,joy,200,210);
+
+  var border = new Image();
+  border.src = "img/border.png";
+
+  border.onload = function(){
+  ctx.drawImage(border,85,-5,285,100);
+  };
+
+  var border1 = new Image();
+  border1.src = "img/border.png";
+
+  border1.onload = function(){
+  ctx.drawImage(border1,990,-5,285,100);
+  };
 
   ctx.fillStyle="red";
   ctx.font = "50px fire";
@@ -327,6 +582,20 @@ function Sword (){
 
   ctx.fillStyle="green";
   ctx.fillRect(990, 20,(health1/100)*280,50);
+
+  ctx.fillStyle="black";
+  ctx.font = "35px fire";
+  ctx.fillText("Joe", 100, 60);
+
+  ctx.fillStyle="black";
+  ctx.font = "35px fire";
+  ctx.fillText("Lebron", 1160, 60);
+
+  var backgroundImage1 = new Image();
+  backgroundImage1.src = "img/smash1.png";
+  backgroundImage1.onload = function(){
+  ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+  };
 
            ctx.drawImage(sword, xCord, 450,90,90);
 
@@ -342,6 +611,20 @@ function Sword (){
 
             setTimeout (function(){
 
+              var border = new Image();
+              border.src = "img/border.png";
+
+              border.onload = function(){
+              ctx.drawImage(border,85,-5,285,100);
+              };
+
+              var border1 = new Image();
+              border1.src = "img/border.png";
+
+              border1.onload = function(){
+              ctx.drawImage(border1,990,-5,285,100);
+              };
+
             ctx.fillStyle="red";
             ctx.font = "50px fire";
             ctx.fillText("AMAZING SMASH BROS",390,70);
@@ -352,19 +635,125 @@ function Sword (){
             ctx.fillStyle="green";
             ctx.fillRect(990, 20,(health1/100)*280,50);
 
-            if (health <= 0) {
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Joe", 100, 60);
 
-              ctx.fillStyle="red";
-              ctx.font = "100px fire";
-              ctx.fillText("YOU'RE DONE BUDDY",200,470);
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Lebron", 1160, 60);
 
-            }
+            var backgroundImage1 = new Image();
+            backgroundImage1.src = "img/smash1.png";
+            backgroundImage1.onload = function(){
+            ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+            };
+
             },50);
           }
+          if (xCord > 880 && lebrony > 350){
+            console.log("HERE EWE GOO");
+            health1 -=20;
+            ctx.clearRect(xCord,450,65,65);
+            ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
+            ctx.drawImage(lebron,880,lebrony,230,240);
+            ctx.drawImage(jo,220,joy,200,210);
+
+            var border = new Image();
+            border.src = "img/border.png";
+
+            border.onload = function(){
+            ctx.drawImage(border,85,-5,285,100);
+            };
+
+            var border1 = new Image();
+            border1.src = "img/border.png";
+
+            border1.onload = function(){
+            ctx.drawImage(border1,990,-5,285,100);
+            };
+
+            ctx.fillStyle="red";
+            ctx.font = "50px fire";
+            ctx.fillText("AMAZING SMASH BROS",390,70);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(90,20,(health/100)*280,50);
+
+            ctx.fillStyle="green";
+            ctx.fillRect(990, 20,(health1/100)*280,50);
+
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Joe", 100, 60);
+
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Lebron", 1160, 60);
+
+            var backgroundImage1 = new Image();
+            backgroundImage1.src = "img/smash1.png";
+            backgroundImage1.onload = function(){
+            ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+            };
+            if (health1 <= 0) {
+
+              alert("Hello, you lost!");
+
+              health1 = 100;
+
+              document.location.reload();
+
+              theEvent.preventDefault();
+
+
+            }
+            clearInterval(interval);
+
+
+                }
        }, 30);
 
-       health1 -=40;
+       setTimeout (function(){
 
+         var border = new Image();
+         border.src = "img/border.png";
+
+         border.onload = function(){
+         ctx.drawImage(border,85,-5,285,100);
+         };
+
+         var border1 = new Image();
+         border1.src = "img/border.png";
+
+         border1.onload = function(){
+         ctx.drawImage(border1,990,-5,285,100);
+         };
+
+       ctx.fillStyle="red";
+       ctx.font = "50px fire";
+       ctx.fillText("AMAZING SMASH BROS",390,70);
+
+       ctx.fillStyle="green";
+       ctx.fillRect(90,20,(health/100)*280,50);
+
+       ctx.fillStyle="green";
+       ctx.fillRect(990, 20,(health1/100)*280,50);
+
+       ctx.fillStyle="black";
+       ctx.font = "35px fire";
+       ctx.fillText("Joe", 100, 60);
+
+       ctx.fillStyle="black";
+       ctx.font = "35px fire";
+       ctx.fillText("Lebron", 1160, 60);
+
+       var backgroundImage1 = new Image();
+       backgroundImage1.src = "img/smash1.png";
+       backgroundImage1.onload = function(){
+       ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+       };
+       },50);
      };
 }
 
@@ -407,6 +796,20 @@ function Wheelchair (){
           yCord -=10;
            xCord += 20;
 
+           var border = new Image();
+           border.src = "img/border.png";
+
+           border.onload = function(){
+           ctx.drawImage(border,85,-5,285,100);
+           };
+
+           var border1 = new Image();
+           border1.src = "img/border.png";
+
+           border1.onload = function(){
+           ctx.drawImage(border1,990,-5,285,100);
+           };
+
            ctx.fillStyle="red";
            ctx.font = "50px fire";
            ctx.fillText("AMAZING SMASH BROS",390,70);
@@ -416,6 +819,20 @@ function Wheelchair (){
 
            ctx.fillStyle="green";
            ctx.fillRect(990, 20,(health1/100)*280,50);
+
+           ctx.fillStyle="black";
+           ctx.font = "35px fire";
+           ctx.fillText("Joe", 100, 60);
+
+           ctx.fillStyle="black";
+           ctx.font = "35px fire";
+           ctx.fillText("Lebron", 1160, 60);
+
+           var backgroundImage1 = new Image();
+           backgroundImage1.src = "img/smash1.png";
+           backgroundImage1.onload = function(){
+           ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+           };
 
           //  ctx.drawImage(wheelchair, xCord, yCord,65,65);
 
@@ -449,9 +866,22 @@ function Wheelchair (){
             // }
           }
         else if (xCord > 730){
-
           yCord +=10;
            xCord += 20;
+
+           var border = new Image();
+           border.src = "img/border.png";
+
+           border.onload = function(){
+           ctx.drawImage(border,85,-5,285,100);
+           };
+
+           var border1 = new Image();
+           border1.src = "img/border.png";
+
+           border1.onload = function(){
+           ctx.drawImage(border1,990,-5,285,100);
+           };
 
            ctx.fillStyle="red";
            ctx.font = "50px fire";
@@ -463,10 +893,16 @@ function Wheelchair (){
            ctx.fillStyle="green";
            ctx.fillRect(990, 20,(health1/100)*280,50);
 
+           var backgroundImage1 = new Image();
+           backgroundImage1.src = "img/smash1.png";
+           backgroundImage1.onload = function(){
+           ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+           };
+
             if (xCord === 1100) {
               clearInterval(interval);
               var backgroundImage = new Image();
-              backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
+              backgroundImage.src = "img/background.png";
 
               backgroundImage.onload = function(){
                 ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
@@ -487,13 +923,26 @@ function Wheelchair (){
 
               lebron.onload = function (){
                 ctx.drawImage(lebron,880,lebrony,230,240);
-              };
-            },10);
+                  };
+                },10);
 
-
-
-
+                }
+            }
             setTimeout (function(){
+
+              var border = new Image();
+              border.src = "img/border.png";
+
+              border.onload = function(){
+              ctx.drawImage(border,85,-5,285,100);
+              };
+
+              var border1 = new Image();
+              border1.src = "img/border.png";
+
+              border1.onload = function(){
+              ctx.drawImage(border1,990,-5,285,100);
+              };
 
             ctx.fillStyle="red";
             ctx.font = "50px fire";
@@ -505,39 +954,74 @@ function Wheelchair (){
             ctx.fillStyle="green";
             ctx.fillRect(990, 20,(health1/100)*280,50);
 
-            if (health <= 0) {
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Joe", 100, 60);
 
-              ctx.fillStyle="red";
-              ctx.font = "100px fire";
-              ctx.fillText("YOU'RE DONE BUDDY",200,470);
+            ctx.fillStyle="black";
+            ctx.font = "35px fire";
+            ctx.fillText("Lebron", 1160, 60);
+
+            var backgroundImage1 = new Image();
+            backgroundImage1.src = "img/smash1.png";
+            backgroundImage1.onload = function(){
+            ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+            };
+
+            if (health1 <= 0) {
+
+              alert("Hello, you lost!");
+              theEvent.preventDefault();
+
 
             }
             },50);
-            }
-        }
-        // if (health <= 0) {
-        //
-        //   ctx.fillStyle="red";
-        //   ctx.font = "100px fire";
-        //   ctx.fillText("YOU'RE DONE BUDDY",200,470);
-        //
-        // }
-       }, 30);
 
-      //  setTimeout (function(){
-       //
-      //  ctx.fillStyle="red";
-      //  ctx.font = "50px fire";
-      //  ctx.fillText("AMAZING SMASH BROS",390,70);
-       //
-      //  ctx.fillStyle="green";
-      //  ctx.fillRect(90,20,(health/100)*280,50);
-       //
-      //  ctx.fillStyle="green";
-      //  ctx.fillRect(990, 20,(health1/100)*280,50);
-      //  },50);
+          },30);
 
-       health1 -=20;
+       setTimeout (function(){
+
+         var border = new Image();
+         border.src = "img/border.png";
+
+         border.onload = function(){
+         ctx.drawImage(border,85,-5,285,100);
+         };
+
+         var border1 = new Image();
+         border1.src = "img/border.png";
+
+         border1.onload = function(){
+         ctx.drawImage(border1,990,-5,285,100);
+         };
+
+       ctx.fillStyle="red";
+       ctx.font = "50px fire";
+       ctx.fillText("AMAZING SMASH BROS",390,70);
+
+       ctx.fillStyle="green";
+       ctx.fillRect(90,20,(health/100)*280,50);
+
+       ctx.fillStyle="green";
+       ctx.fillRect(990, 20,(health1/100)*280,50);
+
+       ctx.fillStyle="black";
+       ctx.font = "35px fire";
+       ctx.fillText("Joe", 100, 60);
+
+       ctx.fillStyle="black";
+       ctx.font = "35px fire";
+       ctx.fillText("Lebron", 1160, 60);
+
+       var backgroundImage1 = new Image();
+       backgroundImage1.src = "img/smash1.png";
+       backgroundImage1.onload = function(){
+       ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+     };
+
+       },50);
+
+       health1 -=10;
 
 };
 
@@ -553,11 +1037,25 @@ Image.prototype.Jump = function (){
     if (lebrony > limit && !goingDown){
     ctx.clearRect(880,lebrony,230,240);
     ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
-    ctx.drawImage(jo,200,joy,220,210);
+    ctx.drawImage(jo,220,joy,220,210);
 
         lebrony-=50;
         console.log('jumping: ' + lebrony);
         ctx.drawImage(lebron,880,lebrony,230,240);
+
+        var border = new Image();
+        border.src = "img/border.png";
+
+        border.onload = function(){
+        ctx.drawImage(border,85,-5,285,100);
+        };
+
+        var border1 = new Image();
+        border1.src = "img/border.png";
+
+        border1.onload = function(){
+        ctx.drawImage(border1,990,-5,285,100);
+        };
 
         ctx.fillStyle="red";
         ctx.font = "50px fire";
@@ -568,6 +1066,20 @@ Image.prototype.Jump = function (){
 
         ctx.fillStyle="green";
         ctx.fillRect(990, 20,(health1/100)*280,50);
+
+        ctx.fillStyle="black";
+        ctx.font = "35px fire";
+        ctx.fillText("Joe", 100, 60);
+
+        ctx.fillStyle="black";
+        ctx.font = "35px fire";
+        ctx.fillText("Lebron", 1160, 60);
+
+        var backgroundImage1 = new Image();
+        backgroundImage1.src = "img/smash1.png";
+        backgroundImage1.onload = function(){
+        ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+        };
 }
     else if (lebrony < jump_y )  {
         {
@@ -575,10 +1087,24 @@ Image.prototype.Jump = function (){
       goingDown = true;
       ctx.clearRect(880,lebrony,230,240);
       ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
-      ctx.drawImage(jo,200,joy,220,210);
+      ctx.drawImage(jo,220,joy,220,210);
 
           lebrony +=50;
           console.log('jumping: ' + lebrony);
+
+          var border = new Image();
+          border.src = "img/border.png";
+
+          border.onload = function(){
+          ctx.drawImage(border,85,-5,285,100);
+          };
+
+          var border1 = new Image();
+          border1.src = "img/border.png";
+
+          border1.onload = function(){
+          ctx.drawImage(border1,990,-5,285,100);
+          };
 
           ctx.fillStyle="red";
           ctx.font = "50px fire";
@@ -589,6 +1115,20 @@ Image.prototype.Jump = function (){
 
           ctx.fillStyle="green";
           ctx.fillRect(990, 20,(health1/100)*280,50);
+
+          ctx.fillStyle="black";
+          ctx.font = "35px fire";
+          ctx.fillText("Joe", 100, 60);
+
+          ctx.fillStyle="black";
+          ctx.font = "35px fire";
+          ctx.fillText("Lebron", 1160, 60);
+
+          var backgroundImage1 = new Image();
+          backgroundImage1.src = "img/smash1.png";
+          backgroundImage1.onload = function(){
+          ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+          };
 
           ctx.drawImage(lebron,880,lebrony,230,240);
       }
@@ -610,6 +1150,20 @@ Image.prototype.Jump1 = function (){
         joy-=50;
         console.log('jumping: ' + joy);
 
+        var border = new Image();
+        border.src = "img/border.png";
+
+        border.onload = function(){
+        ctx.drawImage(border,85,-5,285,100);
+        };
+
+        var border1 = new Image();
+        border1.src = "img/border.png";
+
+        border1.onload = function(){
+        ctx.drawImage(border1,990,-5,285,100);
+        };
+
         ctx.fillStyle="red";
         ctx.font = "50px fire";
         ctx.fillText("AMAZING SMASH BROS",390,70);
@@ -620,6 +1174,20 @@ Image.prototype.Jump1 = function (){
         ctx.fillStyle="green";
         ctx.fillRect(990, 20,(health1/100)*280,50);
         ctx.drawImage(jo,220,joy,200,230);
+
+        ctx.fillStyle="black";
+        ctx.font = "35px fire";
+        ctx.fillText("Joe", 100, 60);
+
+        ctx.fillStyle="black";
+        ctx.font = "35px fire";
+        ctx.fillText("Lebron", 1160, 60);
+
+        var backgroundImage1 = new Image();
+        backgroundImage1.src = "img/smash1.png";
+        backgroundImage1.onload = function(){
+        ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+        };
 
 }
     else if (joy < jump_y )  {
@@ -633,6 +1201,20 @@ Image.prototype.Jump1 = function (){
           joy +=50;
           console.log('jumping: ' + joy);
 
+          var border = new Image();
+          border.src = "img/border.png";
+
+          border.onload = function(){
+          ctx.drawImage(border,85,-5,285,100);
+          };
+
+          var border1 = new Image();
+          border1.src = "img/border.png";
+
+          border1.onload = function(){
+          ctx.drawImage(border1,990,-5,285,100);
+          };
+
           ctx.fillStyle="red";
           ctx.font = "50px fire";
           ctx.fillText("AMAZING SMASH BROS",390,70);
@@ -642,6 +1224,20 @@ Image.prototype.Jump1 = function (){
 
           ctx.fillStyle="green";
           ctx.fillRect(990, 20,(health1/100)*280,50);
+
+          ctx.fillStyle="black";
+          ctx.font = "35px fire";
+          ctx.fillText("Joe", 100, 60);
+
+          ctx.fillStyle="black";
+          ctx.font = "35px fire";
+          ctx.fillText("Lebron", 1160, 60);
+
+          var backgroundImage1 = new Image();
+          backgroundImage1.src = "img/smash1.png";
+          backgroundImage1.onload = function(){
+          ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+          };
 
           ctx.drawImage(jo,220,joy,200,230);
       }

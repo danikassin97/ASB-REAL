@@ -1,14 +1,22 @@
 var canvas = document.getElementById("my-canvas");
-canvas.height = $(document).height()*0.97;
+canvas.height = $(document).height()*0.9;
 canvas.width = $(document).width()*0.97;
 var ctx = canvas.getContext("2d");
 
 var backgroundImage = new Image();
-backgroundImage.src = "https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif";
+backgroundImage.src = "img/background.png";
 
 backgroundImage.onload = function(){
-  ctx.drawImage(backgroundImage,0,0,canvas.width,canvas.height);
+  ctx.drawImage(backgroundImage,30,0,canvas.width,canvas.height);
 };
+
+setTimeout (function(){
+var backgroundImage1 = new Image();
+backgroundImage1.src = "img/smash1.png";
+backgroundImage1.onload = function(){
+  ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+};
+},40);
 
 var lebrony = 400;
 var joy = 430;
@@ -56,8 +64,28 @@ var health=100;
 var health1=100;
 
 setTimeout (function(){
-ctx.fillStyle="green";
-ctx.fillRect(90,20,(health/100)*280,50);
+var backgroundImage1 = new Image();
+backgroundImage1.src = "img/smash1.png";
+backgroundImage1.onload = function(){
+ctx.drawImage(backgroundImage1,0,75,canvas.width,150);
+};
+
+var border = new Image();
+border.src = "img/border.png";
+
+border.onload = function(){
+ctx.drawImage(border,85,-5,285,100);
+};
+
+var border1 = new Image();
+border1.src = "img/border.png";
+
+border1.onload = function(){
+ctx.drawImage(border1,990,-5,285,100);
+};
+
+// ctx.fillStyle="green";
+// ctx.fillRect(90,20,(health/100)*280,50);
 
 ctx.fillStyle="red";
 ctx.font = "50px fire";
@@ -72,11 +100,21 @@ ctx.fillRect(90,20,(health/100)*280,50);
 
 ctx.fillStyle="green";
 ctx.fillRect(990, 20,(health1/100)*280,50);
+
+ctx.fillStyle="black";
+ctx.font = "35px fire";
+ctx.fillText("Joe", 100, 60);
+
+ctx.fillStyle="black";
+ctx.font = "35px fire";
+ctx.fillText("Lebron", 1160, 60);
+
 },50);
+
+
 
 // Whenever you lose health
 //
-health-=20;
 
 //Whenever you lose health
 

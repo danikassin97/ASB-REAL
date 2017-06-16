@@ -6,6 +6,8 @@ $(document).ready(function(){
 console.log(theEvent.which);
     //up arrow
     if (theEvent.which === 37){
+
+      setTimeout( function (){},4000);
       var head = new Head();
       // head.draw();
          ctx.save();
@@ -30,7 +32,7 @@ $(document).ready(function(){
 
 console.log(theEvent.which);
     //up arrow
-    if (theEvent.which === 39){
+    if (theEvent.which === 88){
       var sword = new Sword();
       // head.draw();
          ctx.save();
@@ -38,7 +40,7 @@ console.log(theEvent.which);
 
   }
 
-  else if (theEvent.which === 40){
+  else if (theEvent.which === 90){
     var wheelchair = new Wheelchair();
     // head.draw();
        ctx.save();
@@ -73,7 +75,7 @@ $(document).ready(function(){
 
   $(document).keydown(function(theEvent){
     console.log('Joe');
-    if (theEvent.which === 74) {
+    if (theEvent.which === 83) {
       console.log('Joe JUMPIN');
     var jumping1 = setInterval(jo.Jump1(),100);
       }

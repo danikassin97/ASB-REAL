@@ -1,210 +1,35 @@
-// body {
-//
-//   background-image: url("https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif");
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   // height: 600px;
-//
-// }
-//
-// .mario {
-//   width: 100px;
-//   height: 130px;
-//   position: relative;
-//   top: 400px;
-//   left: 300px;
-// }
-//
-// .pokemon {
-//   float: right;
-//   width: 130px;
-//   height: 180px;
-//   position: relative;
-//   top: 370px;
-//   right: 300px;
-// }
-//
-// .container {
-//   height: 50px;
-// }
-//
-// .left {
-//   animation-name: throw-ball;
-//   animation-duration: 1s;
-// }
-//
-// .ball {
-//   position: relative;
-//   width: 100px;
-//   height: 100px;
-// background-image: url('img/ball-of-light.png');
-// margin: 28.87px 0;
-// right: 120px;
-// top: 220px;
-// }
-//
-// @keyframes throw-ball {
-//   0% {
-//     margin-left: 70%;
-//     width: 300%;
-//   }
-//
-//   100% {
-//     margin-left: 30%;
-//     width: 100%;
-//   }
-// }
-//
-// .up {
-//   animation-name: rocket-launch;
-//   animation-duration: 2s;
-// }
-//
-// .rocket {
-//   position: relative;
-//   width: 250px;
-//   height: 100px;
-// background-image: url('img/rocket.png');
-// background-repeat: no-repeat;
-// background-position: center;
-// background-size: cover;
-// margin: 28.87px 0;
-// right: 160px;
-// top: 220px;
-// }
-//
-// @keyframes rocket-launch {
-//   0% {
-//     margin-left: 70%;
-//     width: 300%;
-//   }
-//
-//   25%{
-//   transform: rotate(20deg);
-//  }
-//
-//
-//
-//
-//   100% {
-//     margin-left: 35%;
-//     width: 100%;
-//
-//
-//   }
-// }
-// /*--------------------*/
-//
-// .bottom{
-//   animation-name: wiggle;
-//   animation-duration: 2s;
-//   // background-image: url("img/crack.png");
-//   // background-repeat: no-repeat;
-//   // background-position: center;
-//   // background-size: cover;
-// }
-//
-// @keyframes wiggle {
-//     0% { transform: rotate(0deg); }
-//    80% { transform: rotate(0deg); }
-//    85% { transform: rotate(5deg); }
-//    95% { transform: rotate(-5deg); }
-//   100% { transform: rotate(0deg); }
-// }
-//
-// .earthquake {
-//    animation-name:move;
-//   animation-duration: 1s;
-//   animation-iteration-count:1;
-// }
-//
-// @keyframes move {
-//   0%{
-//     margin-left: 100px;
-//     // background-image:url("img/crack.png");
-//   }
-//
-//   10%{
-//     margin-left: 0px;
-//     // background-image:url("img/crack.png");
-//   }
-//
-//   20%{
-//     margin-left: 100px;
-//     // background-image:url("img/crack.png");
-//   }
-//
-//   30%{
-//     margin-left: 0px;
-//     // background-color:url("img/crack.png");
-//   }
-//
-//   40%{
-//     margin-left: 100px;
-//     // background-image:url("img/crack.png");
-//   }
-//
-//   50%{
-//     margin-left: 0px;
-//     // background-image:url("img/crack.png");
-//   }
-//
-//   60%{
-//     margin-left: 100px;
-//     // background-image:url("img/crack.png");
-//   }
-//
-//   70%{
-//     margin-left:0px;
-//     // background-color:url("img/crack.png");
-//   }
-//   80%{
-//     margin-left: 100px;
-//     // background-image:url("img/crack.png");
-//   }
-//   90%{
-//     margin-left: 0px;
-//     // background-image:url("img/crack.png");
-//   }
-//   100%{
-//     margin-left: 100px;
-//     // background-image:url("img/crack.png");
-//   }
-// }
-//
-//
-// // different character
-//
-//
-// .right2 {
-//   animation-name: bowserAttack;
-//   animation-duration: 2s;
-// }
-//
-// .bowser {
-//   position: relative;
-//   width: 160px;
-//   height: 150px;
-//   background-image: url('img/bowserMario.png');
-//   margin: 28.87px 0;
-//   left: 120px;
-//   top: 220px;
-// }
-//
-// @keyframes bowserAttack {
-//   0% {
-//     margin-right: 100px;
-//     width: 300%;
-//   }
-//
-//
-//   100% {
-//     margin-right: 300px;
-//     width: 100%;
-//   }
-// }
+
+body {
+  background-image: url("https://media.giphy.com/media/Lr9bbaVAyt3RC/giphy.gif");
+  background-size: cover;
+}
 
 #my-canvas{
   z-index: 2;
-  
+
+}
+
+.instructions{
+  width: 400px;
+}
+
+.instruction-jo{
+  float: left;
+  position: relative;
+  background-color: black;
+  bottom:60px;
+  color: white;
+  left: 50px;
+
+}
+
+.instruction-lebron{
+  float: right;
+  position: relative;
+  left: 950px;
+  bottom: 115px;
+  background-color: black;
+  color: white;
+
+
 }
